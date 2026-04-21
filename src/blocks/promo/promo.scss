@@ -1,0 +1,112 @@
+@use 'lib' as *;
+
+.promo {
+	$self: &;
+
+	position: relative;
+	color: $lightText;
+
+	&__container {
+		position: relative;
+		z-index: 1;
+		padding: fluid(96px, 64px) 0;
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+	}
+
+	&__btn {
+		width: fit-content;
+
+		@include media('<=xs') {
+			width: 100%;
+		}
+	}
+
+	&__title {
+		font-size: fluid(64px, 32px);
+		font-weight: 700;
+		max-width: 960px;
+	}
+
+	&__advantages {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(auto, 460px));
+		gap: 24px fluid(64px, 32px);
+
+		@include media("<=xs") {
+			grid-template-columns: 100%;
+		}
+	}
+
+	&__advantages-item {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 16px;
+
+		img {
+			width: fluid(48px, 32px);
+			object-fit: contain;
+		}
+	}
+
+	&__advantages-item-content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__advantages-item-title {
+		font-weight: 700;
+		margin-bottom: 12px;
+		font-size: fluid(22px, 16px);
+	}
+
+	&__advantages-item-text {
+		line-height: 150%;
+		font-size: fluid(16px, 14px);
+		line-height: 150%;
+	}
+
+	&__bg.swiper {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 0;
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			inset: 0;
+			z-index: 1;
+			background: linear-gradient(90deg,
+					rgba(10, 10, 12, 0.7) 40%,
+					rgba(10, 10, 12, 0) 100%);
+
+			@include media("<=xs") {
+				background: rgba($color: #000000, $alpha: 0.6);
+			}
+		}
+
+		.swiper-slide {
+			height: 100%;
+		}
+
+		.swiper-wrapper {
+			height: 100%;
+		}
+	}
+
+	&__slide {
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: top center;
+		}
+	}
+
+}

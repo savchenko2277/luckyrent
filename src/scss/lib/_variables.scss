@@ -1,0 +1,39 @@
+$matches: (
+	xxxxlg: 1920,
+	xxxlg: 1680,
+	xxlg: 1440,
+	xlg: 1280,
+	lg: 1100,
+	md: 960,
+	sm: 780,
+	xs: 640,
+	xxs: 480,
+	xxxs: 360
+);
+
+$containerWidth: 1280px;
+$containerPadding: 20px;
+
+$background: #FAFAFA;
+$backgroundSecond: #0B0B0C;
+
+$card: #FFFFFF;
+$divider: #E5E5EA;
+$hoverCard: #F2F2F5;
+
+$text: #1C1C1E;
+$secondText: #6E6E73;
+$lightText: #FFFFFF;
+
+$orange: #FF7A1A;
+$hoverOrange: #E86500;
+$lightOrange: #FFF2E8;
+
+$inputBg: #FFFFFF;
+$inputPlaceholder: #A1A1A6;
+
+$bgBtn: #FF7A1A;
+$bgHoverBtn: #E86500;
+
+$transition: 0.3s ease-in-out;
+$cardShadow: 4px 4px 20px rgba(0, 0, 0, 0.04);

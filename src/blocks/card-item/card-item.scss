@@ -1,0 +1,86 @@
+@use 'lib' as *;
+
+.card-item {
+	$self: &;
+
+	background: $card;
+	box-shadow: $cardShadow;
+	padding: 16px;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+
+	&__title {
+		font-weight: 700;
+		font-size: fluid(20px, 16px);
+		margin-bottom: 16px;
+	}
+
+	&__image {
+		width: 100%;
+		aspect-ratio: 1 / 1;
+		margin-bottom: 8px;
+		padding-bottom: 8px;
+		border-bottom: 1px solid $divider;
+	}
+
+	&__about {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+		margin-bottom: 8px;
+		padding-bottom: 8px;
+		border-bottom: 1px solid $divider;
+	}
+
+	&__about-item {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		gap: 8px;
+
+		b {
+			text-align: right;
+		}
+	}
+
+	&__calendar {
+		margin-bottom: 8px;
+		padding-bottom: 8px;
+		border-bottom: 1px solid $divider;
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	&__calendar-item {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		padding-left: 32px;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%; left: 0;
+			transform: translateY(-50%);
+			width: 24px; height: 24px;
+			background: url("../img/icons/calendar.svg") no-repeat center / contain;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		margin-top: auto;
+	}
+
+	&__button {
+		width: 100%;
+	}
+
+}

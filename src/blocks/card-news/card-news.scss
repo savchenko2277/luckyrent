@@ -1,0 +1,35 @@
+@use 'lib' as *;
+
+.card-news {
+	$self: &;
+
+	display: flex;
+	flex-direction: column;
+	border-radius: 8px;
+	overflow: hidden;
+	background: $card;
+
+	&__image {
+		width: 100%;
+		object-fit: cover;
+		aspect-ratio: 16 / 9;
+	}
+
+	&__content {
+		padding: 16px;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: fluid(20px, 16px);
+		margin-bottom: 16px;
+	}
+
+	&__more {
+		color: $orange;
+		margin-top: auto;
+		font-weight: 500;
+		text-decoration: underline;
+	}
+
+}

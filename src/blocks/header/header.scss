@@ -1,0 +1,347 @@
+@use 'lib' as *;
+
+.header {
+	$self: &;
+
+	background: $backgroundSecond;
+	color: $lightText;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+
+	&.is-open {
+
+		#{$self}__menu {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: all;
+		}
+
+		#{$self}__burger {
+			span {
+				opacity: 0;
+			}
+
+			&::before {
+				top: 50%;
+				left: 50%;
+				transform: translateX(-50%) translateY(-50%) rotate(45deg);
+			}
+
+			&::after {
+				bottom: 50%;
+				left: 50%;
+				transform: translateX(-50%) translateY(50%) rotate(-45deg);
+			}
+		}
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		gap: 48px;
+		padding: 16px 0;
+	}
+
+	&__burger {
+		@include flex-center;
+
+		height: 16px;
+		width: 24px;
+		position: relative;
+		z-index: 2;
+
+		span {
+			width: 100%;
+			height: 2px;
+			background: #ffffff;
+			border-radius: 2px;
+			transition: all $transition;
+		}
+
+		&::before {
+			position: absolute;
+			content: '';
+			width: 100%;
+			height: 2px;
+			background: #ffffff;
+			border-radius: 2px;
+			top: 0;
+			left: 0;
+			transition: all $transition;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background: #ffffff;
+			border-radius: 2px;
+			bottom: 0;
+			left: 0;
+			transition: all $transition;
+		}
+
+		@include media(">md") {
+			display: none
+		}
+	}
+
+	&__logo {
+		height: 48px;
+		position: relative;
+		z-index: 3;
+		flex: 0 0 auto;
+
+		img {
+			height: 100%;
+			width: auto;
+			object-fit: contain;
+		}
+
+		@include media("<=xs") {
+			height: 32px;
+		}
+	}
+
+	&__socials {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 24px;
+	}
+
+	&__socials-item {
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 8px;
+		font-weight: 500;
+
+		transition: all $transition;
+
+		&:hover {
+			color: $hoverOrange;
+		}
+
+		img {
+			flex: 0 0 auto;
+			width: 24px;
+			height: 24px;
+			object-fit: cover;
+			overflow: hidden;
+			border-radius: 50%;
+		}
+	}
+
+	&__menu {
+		width: 100%;
+
+		@include media("<=md") {
+			position: fixed;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba($color: $backgroundSecond, $alpha: 0.95);
+			backdrop-filter: blur(4px);
+			z-index: 2;
+			padding: calc(64px + 24px) 0;
+			display: flex;
+			align-items: start;
+			justify-content: start;
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+			transition: all $transition;
+		}
+	}
+
+	&__menu-container.container {
+		@include media(">md") {
+			width: auto;
+			margin: 0;
+			display: flex;
+			flex-direction: row;
+			gap: 48px;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		@include media("<=md") {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			gap: 48px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 32px;
+
+		@include media("<=md") {
+			flex-direction: column;
+			justify-content: start;
+			align-items: start;
+			width: 100%;
+		}
+	}
+
+	&__item {
+		position: relative;
+		font-weight: 500;
+
+		&_list {}
+
+		&:not(.header__item_list) {
+			#{$self}__link {
+				&:hover {
+					color: $hoverOrange;
+				}
+			}
+		}
+
+		#{$self}__link {
+			transition: all $transition;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 8px;
+
+
+			img {
+				width: 24px;
+				height: 18px;
+				object-fit: cover;
+			}
+
+			@include media("<=md") {
+				font-size: 18px;
+			}
+		}
+
+		@include media("<=md") {
+			width: 100%;
+		}
+	}
+
+
+
+	&__item_list {
+		position: relative;
+		cursor: pointer;
+
+		@include media("<=md") {
+			display: grid;
+			grid-template-rows: max-content 0fr;
+			transition: all $transition;
+
+			&.active {
+				grid-template-rows: max-content 1fr;
+
+				#{$self}__item-content {
+					padding-top: 16px;
+				}
+
+				#{$self}__link {
+					&::after {
+						transform: translateY(-50%) translateX(4px) rotate(180deg);
+					}
+				}
+			}
+		}
+
+		@include media(">md") {
+			&:hover {
+				#{$self}__link {
+					&::after {
+						transform: translateY(-50%) translateX(4px) rotate(180deg);
+					}
+				}
+
+				#{$self}__item-content {
+					opacity: 1;
+					visibility: visible;
+					pointer-events: all;
+				}
+			}
+		}
+
+		#{$self}__link {
+			padding-right: 16px;
+			position: relative;
+
+			&::after {
+				content: '';
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%) translateX(4px);
+				display: block;
+				width: 12px;
+				height: 12px;
+				background: url("../img/icons/arrow-down.svg") no-repeat center / contain;
+				transition: all $transition;
+			}
+		}
+
+		#{$self}__item-content {
+			position: absolute;
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+			padding-top: 16px;
+			transition: all $transition;
+
+			@include media("<=md") {
+				position: static;
+				visibility: visible;
+				opacity: 1;
+				pointer-events: all;
+				overflow: hidden;
+				padding-top: 0;
+			}
+		}
+	}
+
+	&__item-list {
+		padding: 16px;
+		background: #ffffff;
+		border-radius: 4px;
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		color: $text;
+		min-width: 200px;
+	}
+
+	&__item-link {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 8px;
+		transition: all $transition;
+
+		&:hover {
+			color: $hoverOrange;
+		}
+
+		img {
+			width: 24px;
+			height: 18px;
+			object-fit: cover;
+		}
+
+
+	}
+
+}

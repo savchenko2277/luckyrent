@@ -1,0 +1,594 @@
+@@include("_head.html", {"id":"home"})
+@@include("_header.html")
+
+<main class="main">
+
+    <section class="promo">
+        <div class="promo__container container">
+            <h1 class="promo__title">
+                Аренда байков <br> на Пхукете
+            </h1>
+            <ul class="promo__advantages">
+                <li class="promo__advantages-item">
+                    <img loading="lazy" src="./img/icons/delivery.svg" alt="">
+                    <div class="promo__advantages-item-content">
+                        <h3 class="promo__advantages-item-title">
+                            Доставка по всему Пхукету
+                        </h3>
+                        <p class="promo__advantages-item-text">
+                            Доставим байк к вам домой
+                        </p>
+                    </div>
+                </li>
+                <li class="promo__advantages-item">
+                    <img loading="lazy" src="./img/icons/head.svg" alt="">
+                    <div class="promo__advantages-item-content">
+                        <h3 class="promo__advantages-item-title">
+                            В комплект входят шлемы и плащи
+                        </h3>
+                        <p class="promo__advantages-item-text">
+                            2 шлема и 2 плаща бесплатно
+                        </p>
+                    </div>
+                </li>
+                <li class="promo__advantages-item">
+                    <img loading="lazy" src="./img/icons/phone.svg" alt="">
+                    <div class="promo__advantages-item-content">
+                        <h3 class="promo__advantages-item-title">
+                            Держатель телефона
+                        </h3>
+                        <p class="promo__advantages-item-text">
+                            Держатель для телефона бесплатно для каждого байка
+                        </p>
+                    </div>
+                </li>
+                <li class="promo__advantages-item">
+                    <img loading="lazy" src="./img/icons/guard.svg" alt="">
+                    <div class="promo__advantages-item-content">
+                        <h3 class="promo__advantages-item-title">
+                            Страхование
+                        </h3>
+                        <p class="promo__advantages-item-text">
+                            Страховка водителя и пассажира
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <a href="№" class="promo__btn btn">Забронировать</a>
+        </div>
+        <div class="promo__bg swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide promo__slide">
+                    <img src="./img/promo/1.webp" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cards-section">
+        <div class="cards-section__container container">
+            <h2 class="cards-section__title title">Отзывы</h2>
+            <a href="#" class="cards-section__more">Показать все</a>
+            <div class="cards-section__swiper swiper">
+                <div class="swiper-wrapper">
+                    @@include("_card-review.html", {"classCard":"cards-section__slide swiper-slide"})
+                    @@include("_card-review.html", {"classCard":"cards-section__slide swiper-slide"})
+                    @@include("_card-review.html", {"classCard":"cards-section__slide swiper-slide"})
+                    @@include("_card-review.html", {"classCard":"cards-section__slide swiper-slide"})
+                    @@include("_card-review.html", {"classCard":"cards-section__slide swiper-slide"})
+                    @@include("_card-review.html", {"classCard":"cards-section__slide swiper-slide"})
+                </div>
+            </div>
+            <div class="custom-navigation cards-section__navigation">
+                <button type="button" class="custom-navigation__btn custom-navigation__btn_prev"></button>
+                <button type="button" class="custom-navigation__btn custom-navigation__btn_next"></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="cards-section">
+        <div class="cards-section__container container">
+            <h2 class="cards-section__title title">Скутеры</h2>
+            <a href="#" class="cards-section__more">Показать все</a>
+            <div class="cards-section__swiper swiper">
+                <div class="swiper-wrapper">
+                    @@include("_card-item.html", {"classCard":"cards-section__slide swiper-slide"})
+                    @@include("_card-item.html", {"classCard":"cards-section__slide swiper-slide"})
+                    @@include("_card-item.html", {"classCard":"cards-section__slide swiper-slide"})
+                    @@include("_card-item.html", {"classCard":"cards-section__slide swiper-slide"})
+                    @@include("_card-item.html", {"classCard":"cards-section__slide swiper-slide"})
+                </div>
+            </div>
+            <div class="custom-navigation cards-section__navigation">
+                <button type="button" class="custom-navigation__btn custom-navigation__btn_prev"></button>
+                <button type="button" class="custom-navigation__btn custom-navigation__btn_next"></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="cards-section">
+        <div class="cards-section__container container">
+            <h2 class="cards-section__title title">Миди скутеры</h2>
+            <a href="#" class="cards-section__more">Показать все</a>
+            <div class="cards-section__swiper swiper">
+                <div class="swiper-wrapper">
+                    @@include("_card-item.html", {"classCard":"cards-section__slide swiper-slide"})
+                    @@include("_card-item.html", {"classCard":"cards-section__slide swiper-slide"})
+                    @@include("_card-item.html", {"classCard":"cards-section__slide swiper-slide"})
+                    @@include("_card-item.html", {"classCard":"cards-section__slide swiper-slide"})
+                    @@include("_card-item.html", {"classCard":"cards-section__slide swiper-slide"})
+                </div>
+            </div>
+            <div class="custom-navigation cards-section__navigation">
+                <button type="button" class="custom-navigation__btn custom-navigation__btn_prev"></button>
+                <button type="button" class="custom-navigation__btn custom-navigation__btn_next"></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="cards-section">
+        <div class="cards-section__container container">
+            <h2 class="cards-section__title title">Макси скутеры</h2>
+            <a href="#" class="cards-section__more">Показать все</a>
+            <div class="cards-section__swiper swiper">
+                <div class="swiper-wrapper">
+                    @@include("_card-item.html", {"classCard":"cards-section__slide swiper-slide"})
+                    @@include("_card-item.html", {"classCard":"cards-section__slide swiper-slide"})
+                    @@include("_card-item.html", {"classCard":"cards-section__slide swiper-slide"})
+                    @@include("_card-item.html", {"classCard":"cards-section__slide swiper-slide"})
+                    @@include("_card-item.html", {"classCard":"cards-section__slide swiper-slide"})
+                </div>
+            </div>
+            <div class="custom-navigation cards-section__navigation">
+                <button type="button" class="custom-navigation__btn custom-navigation__btn_prev"></button>
+                <button type="button" class="custom-navigation__btn custom-navigation__btn_next"></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="cards-section">
+        <div class="cards-section__container container">
+            <h2 class="cards-section__title title">Мотоциклы</h2>
+            <a href="#" class="cards-section__more">Показать все</a>
+            <div class="cards-section__swiper swiper">
+                <div class="swiper-wrapper">
+                    @@include("_card-item.html", {"classCard":"cards-section__slide swiper-slide"})
+                    @@include("_card-item.html", {"classCard":"cards-section__slide swiper-slide"})
+                    @@include("_card-item.html", {"classCard":"cards-section__slide swiper-slide"})
+                    @@include("_card-item.html", {"classCard":"cards-section__slide swiper-slide"})
+                    @@include("_card-item.html", {"classCard":"cards-section__slide swiper-slide"})
+                </div>
+            </div>
+            <div class="custom-navigation cards-section__navigation">
+                <button type="button" class="custom-navigation__btn custom-navigation__btn_prev"></button>
+                <button type="button" class="custom-navigation__btn custom-navigation__btn_next"></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="cards-section">
+        <div class="cards-section__container container">
+            <h2 class="cards-section__title title">Автомобили</h2>
+            <a href="#" class="cards-section__more">Показать все</a>
+            <div class="cards-section__swiper swiper">
+                <div class="swiper-wrapper">
+                    @@include("_card-item.html", {"classCard":"cards-section__slide swiper-slide"})
+                    @@include("_card-item.html", {"classCard":"cards-section__slide swiper-slide"})
+                    @@include("_card-item.html", {"classCard":"cards-section__slide swiper-slide"})
+                    @@include("_card-item.html", {"classCard":"cards-section__slide swiper-slide"})
+                </div>
+            </div>
+            <div class="custom-navigation cards-section__navigation">
+                <button type="button" class="custom-navigation__btn custom-navigation__btn_prev"></button>
+                <button type="button" class="custom-navigation__btn custom-navigation__btn_next"></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="cards-section">
+        <div class="cards-section__container container">
+            <h2 class="cards-section__title title">Кабриолеты</h2>
+            <a href="#" class="cards-section__more">Показать все</a>
+            <div class="cards-section__swiper swiper">
+                <div class="swiper-wrapper">
+                    @@include("_card-item.html", {"classCard":"cards-section__slide swiper-slide"})
+                    @@include("_card-item.html", {"classCard":"cards-section__slide swiper-slide"})
+                </div>
+            </div>
+            <div class="custom-navigation cards-section__navigation">
+                <button type="button" class="custom-navigation__btn custom-navigation__btn_prev"></button>
+                <button type="button" class="custom-navigation__btn custom-navigation__btn_next"></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="how">
+        <div class="how__container container">
+            <h2 class="how__title title">Как это работает?</h2>
+            <div class="how__cards">
+                <div class="how__card">
+                    <div class="how__card-top">
+                        <img src="./img/icons/phone-dark.svg" alt="" class="how__card-icon">
+                        <h4 class="how__card-title">
+                            Забронируйте в мессенджере
+                        </h4>
+                    </div>
+                    <p class="how__card-text">
+                        Оплата после получения мотоцикла. Мы принимаем все способы оплаты
+                    </p>
+                </div>
+                <div class="how__card">
+                    <div class="how__card-top">
+                        <img src="./img/icons/delivery-dark.svg" alt="" class="how__card-icon">
+                        <h4 class="how__card-title">
+                            Служба доставки
+                        </h4>
+                    </div>
+                    <p class="how__card-text">
+                        Осуществляем доставку по всему Пхукету
+                    </p>
+                </div>
+                <div class="how__card">
+                    <div class="how__card-top">
+                        <img src="./img/icons/map.svg" alt="" class="how__card-icon">
+                        <h4 class="how__card-title">
+                            Наслаждайтесь своим приключением
+                        </h4>
+                    </div>
+                    <p class="how__card-text">
+                        Исследуйте удивительный Пхукет
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cards-section">
+        <div class="cards-section__container container">
+            <h2 class="cards-section__title title">Новости</h2>
+            <a href="#" class="cards-section__more">Показать все</a>
+            <div class="cards-section__swiper swiper">
+                <div class="swiper-wrapper">
+                    @@include("_card-news.html", {"classCard":"cards-section__slide swiper-slide"})
+                    @@include("_card-news.html", {"classCard":"cards-section__slide swiper-slide"})
+                    @@include("_card-news.html", {"classCard":"cards-section__slide swiper-slide"})
+                    @@include("_card-news.html", {"classCard":"cards-section__slide swiper-slide"})
+                </div>
+            </div>
+            <div class="custom-navigation cards-section__navigation">
+                <button type="button" class="custom-navigation__btn custom-navigation__btn_prev"></button>
+                <button type="button" class="custom-navigation__btn custom-navigation__btn_next"></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="article">
+        <div class="article__container container">
+            <div class="article__content">
+                <h2>
+                    Прокат байков на Пхукете
+                </h2>
+                <p>
+                    Пхукет – самый большой остров Таиланда, настоящая жемчужина для любителей пляжей и дикой природы.
+                    Кроме природных красот, остров предлагает архитектурные достопримечательности, а также живописные
+                    места местной культуры. Учитывая размеры Пхукета – 21х50 км, добраться до некоторых точек
+                    туристического интереса достаточно сложно, порой и вовсе невозможно даже на такси. В этом случае
+                    отдыхающим на Пхукете поможет аренда байка. Воспользоваться такой услугой предлагают сотни местных
+                    компаний.
+                </p>
+                <p>
+                    Выгодная аренда байка на Пхукете возможна при сотрудничестве с организацией Lucky Rent. У нас не
+                    только хорошие цены, но и техническое состояние байков находится на высоком уровне.
+                </p>
+                <p>
+                    Взять напрокат у местной конторы недорого старый разваливающийся байк будет далеко не лучшей идеей.
+                    С такой техникой вместо осмотра местности вы посетите все ремонтные мастерские, где кроме мокрых
+                    механиков и запаха масла ничего примечательного нет.
+                </p>
+                <h3>
+                    Аренда байка на Пхукете: на что обратить внимание
+                </h3>
+                <p>
+                    По незнанию, много туристов приехав на Пхукет бегут искать ближайший прокат байков, чтобы пуститься
+                    осматривать остров. В результате можно зря потратить деньги или попасть в неловкую ситуацию с
+                    материальными затратами. Поэтому мы расскажем, как взять байк в прокат на Пхукете безопасно и
+                    выгодно.
+                </p>
+                <p>
+                    Выбирать себе транспорт на время отдыха желательно в одном из трех городов острова – Пхукет, Чалонг,
+                    Патонг. Самый большой прокат байков в Пхукет-тауне, а где большая конкуренция, там и цены ниже.
+                    Прежде чем подписать договор аренды, обратите внимание на следующие детали:
+                </p>
+                <ul>
+                    <li>
+                        Найдите приличную организацию. Местные компании на Пхукете предлагают услуги жителям острова и
+                        по остаточному принципу для туристов, поэтому байк может быть в ужасном состоянии. Лучше
+                        поискать зарубежную фирму – у них и байки новее, и техническое состояние не хромает. Возможна
+                        аренда байка на Пхукете у русских, украинцев, белорусов или других представителей этнических
+                        групп бывшего СССР. Договориться с ними можно и без знания английского, да и обговорить все,
+                        чтобы взять байк, проще. По стоимости это может быть немного дороже чем у местных, но отдых
+                        пройдет спокойнее.
+                    </li>
+                    <li>
+                        Чтобы не попасть на аферистов, спрашивайте в пункте проката на Пхукете, где хотите взять байк, о
+                        наличии лицензии и адрес официального представительства или офиса компании. Если на вопрос
+                        реакция подозрительная или не хотят отвечать – уходите от греха подальше.
+                    </li>
+                    <li>
+                        Выберете понравившуюся модель. Исходя из соображений удобства и рациональности найдите себе байк
+                        с объемом двигателя от 110 до 350 кубических сантиметров.
+                    </li>
+                    <li>
+                        Обратите внимание на год выпуска и километраж пробега. Байки с меньшим пробегом будут однозначно
+                        дороже, разница в цене может составлять от 50 батов в сутки.
+                    </li>
+                    <li>
+                        Согласно законодательству Таиланда обязательному страхованию подлежит весь транспорт. Проверьте
+                        застрахован ли байк, как минимум должна быть страховка Поробо. Обычно ее вполне хватает для
+                        компенсации возможного ущерба.
+                    </li>
+                    <li>
+                        Устройте тест-драйв. Обязательно попросите владельца дать вам проехаться по Пхукету на выбранном
+                        железном коне. Внешний вид байка иногда бывает обманчивым и за красивой оболочкой может
+                        прятаться усталая лошадка с кучей скрытых проблем. Попробуйте байк в динамике движения по
+                        транспортному потоку Пхукета и проверьте работу тормозов, если все хорошо – берите.
+                    </li>
+                </ul>
+                <p>
+                    Lucky Rent предлагает взять в прокат на Пхукете застрахованный байк с небольшим пробегом для всех
+                    желающих. Взять байк в аренду, чтобы украсить свой отпуск, можно на любое время, начиная от одного
+                    дня. Языковой барьер также не станет помехой — наши сотрудники владеют русским, украинским,
+                    английским и тайским языками.
+                </p>
+                <h3>
+                    Аренда байка в Тайланде: что выбрать
+                </h3>
+                <p>
+                    Выбирая из множества моделей и марок байков в прокатах Пхукета, желательно отдать предпочтение
+                    известным производителям, таким как Honda или Yamaha. У них достаточно большой выбор по объему
+                    двигателя и габаритным размерам. К плюсам еще можно отнести высокую надежность и безопасность
+                    управления. От чего отталкиваться при выборе модели:
+                </p>
+                <ul>
+                    <li>
+                        Для спокойных туристов, которые путешествуют в одном лице или с любимым человеком на Пхукет,
+                        вполне достаточно взять в наем байк с двигателем 110-350 куб. см. Неспешные переезды по
+                        океаническому побережью дадут насладиться морскими пейзажами и неповторимой природой этого
+                        живописного края. Такие модели имеют вместительный багажник под сидением, в который можно
+                        положить все необходимое. При этим сумка с пляжным покрывалом и полотенцем не будет развиваться
+                        на ветру за мотоциклом.
+                    </li>
+                    <li>
+                        Аренда биг байка на Пхукете будет полезна семейным парам среднего возраста. Такой байк имеет
+                        нормальные полноценные сидения. Благодаря этому вы не будете чувствовать себя птицей на ветке,
+                        пытающейся на ней удержаться в ветреную погоду.
+                        Для семьи из двух родителей и ребенка выгоднее будет аренда байка с коляской в Пхукете. Это
+                        удобно и гораздо дешевле, <a href="#">чем прокат автомобиля на Пхукете.</a>
+                    </li>
+                    <li>
+                        <a href="#">Аренда мотоцикла</a> с двигателем более 350 куб. см подойдет для настоящих байкеров,
+                        обожающих
+                        сидеть на мощном моторе. А вот для любителей быстрой езды есть неприятный сюрприз – в Пхукете
+                        движение замедленное, поэтому лететь за 100 км/ч получится только в безлюдных районах. Да и
+                        наперегонки соревноваться с местными водителями мы не рекомендуем. У них просто чудовищная
+                        реакция и в перестроениях они мастера. А вы даже если проедете какое-то расстояние в лидерах, то
+                        на очередном повороте обязательно попадете в неприятности.
+                    </li>
+                </ul>
+                <p>
+                    В Lucky Rent есть байки и <a href="#">скутеры в аренду</a> на любой вкус и потребности. Обратившись
+                    к нам на Пхукете, вы обязательно найдете подходящий транспорт для своего стиля отдыха.
+                </p>
+                <h3>
+                    Как подписать договор аренды байка на Пхукете
+                </h3>
+                <p>
+                    После всех проверок, выбрав себе байк, вместе с владельцем проведите его тщательный осмотр. Брать
+                    побитый и поврежденный транспорт ни в коем случае не стоит, даже если предлагают почти даром.
+                    Допускается наличие царапин, потертостей и других мелких повреждений. Снимите их на фото или видео,
+                    чтобы был виден дефект и ваш палец, указывающий на него.
+                </p>
+                <p>
+                    Учтите, если поленитесь или забудете это сделать, есть высокая вероятность оплатить заделку этих
+                    царапин из своего кармана. Хозяин может сказать, что их не было и повреждения появились после того,
+                    как вы покатались на байке. После таких заявлений не ждите получить обратно сумму залога – она
+                    пойдет на ремонт, согласно пунктам подписанного договора. Ведь по нему арендатор оплачивает весь
+                    нанесенный ущерб. В компании Lucky Rent такие ситуации исключены – мы тщательно следим за состоянием
+                    всех наших транспортных средств.
+                </p>
+                <ul>
+                    <li>
+                        Выбрав байк и обсудив конечную стоимость, заключается договор аренды. Как документ,
+                        подтверждающий личность, берется ксерокопия первой страницы загранпаспорта с фотографией,
+                        номером и серией документа.
+                    </li>
+                    <li>
+                        В договоре прописывается модель транспортного средства, дата начала аренды с указанием точного
+                        времени, а также время, когда вы обязуетесь вернуть байк владельцу.
+                    </li>
+                    <li>
+                        В стоимость аренды байка входит страховка пассажира и водителя, а также 2 защитных шлема и
+                        плаща.
+                    </li>
+                    <li>
+                        Договор скрепляется либо печатью, либо подписью сотрудника пункта проката байков.
+                    </li>
+                    <li>
+                        Заполненный бланк договора вручается вам для подписания.
+                    </li>
+                </ul>
+                <p>
+                    При необходимости мы можем доставить байк в необходимый район Пхукета. Оплата происходит при
+                    получении вами транспортного средства. Мы принимаем различные способы оплаты – вы точно сможете
+                    выбрать оптимальный для себя вариант.
+                </p>
+                <h3>
+                    Аренда байка на Пхукете: цена и что на нее влияет
+                </h3>
+                <p>
+                    Многие заблаговременно интересуются, во что обойдется им аренда транспорта в Таиланде, чтобы
+                    понимать, какую сумму взять с собой на отдых. На Пхукете в разное время года разная цена на услугу.
+                    Все зависит от сезонности, которая выглядит примерно так:
+                </p>
+                <ul>
+                    <li>
+                        Апрель-август – низкий сезон, стоимость снижается и находится на минимальном уровне.
+                    </li>
+                    <li>
+                        Сентябрь-ноябрь – высокий сезон, услуга постепенно дорожает.
+                    </li>
+                    <li>
+                        Декабрь-март – пик, в этом режиме цена максимальная.
+                    </li>
+                </ul>
+                <p>
+                    Чтобы немного сэкономить на ренте, не нужно ехать на Пхукет в период высоких температур и муссонов.
+                    Жаркий влажный климат не все хорошо переносят, поэтому такая экономия к добру не приведет.
+                </p>
+                <p>
+                    Аренда на один день будет самой дорогой по стоимости, а на месяц – самой дешевой в пересчете на одни
+                    сутки. Месяц считается как 30 дней.
+                </p>
+                <p>
+                    Также на стоимость проката влияет модель выбранного байка. На сайте luckyrent-phuket.com указана
+                    ориентировочная цена.
+                </p>
+                <p>
+                    Выходцы из СНГ часто ищут русскоязычных арендодателей, так как не владеют в совершенстве
+                    иностранными языками. На Пхукете это не проблема – работники Lucky Rent запросто готовы общаться на
+                    русском, украинском, английском и тайском языках. Обращайтесь в наши пункты выдачи и договаривайтесь
+                    на любом языке, который вам понятен, это на стоимость аренды не влияет.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section data-faq-js class="faq">
+        <div class="faq__container container">
+            <h2 class="faq__title title">Вопросы и ответы</h2>
+            <div class="faq__items">
+                <div class="faq__item">
+                    <h3 class="faq__item-title">
+                        <span>Можно ли иностранцу взять байк в аренду на Пхукете?</span>
+                        <div class="faq__item-icon"></div>
+                    </h3>
+                    <div class="faq__item-content">
+                        <p>
+                            Мы предоставляем свои услуги всем желающим – жителям острова, Таиланда, приезжим из разных
+                            стран. Для нашей организации не имеет значения, кто вы и откуда, поэтому обслуживание
+                            доступно на русском, украинском, английском и тайском языках. Наши работники относятся с
+                            уважением ко всем посетителям и предоставляют сервис на самом высоком уровне. С байками
+                            Lucky Rent ваш отдых на Пхукете будет по-настоящему прекрасным.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <h3 class="faq__item-title">
+                        <span>Что считается важным, когда берешь байк на прокат?</span>
+                        <div class="faq__item-icon"></div>
+                    </h3>
+                    <div class="faq__item-content">
+                        <p>
+                            Ответственным и непростым решением считается выбор подходящей модели. От того насколько оно
+                            было правильным зависит удобство и комфорт передвижения. Мы предлагаем модели от известных и
+                            проверенных производителей Honda и Yamaha. Наши байки сдаются в аренду на срок от одного дня
+                            до месяца. По желанию клиента взять напрокат байк можно на любой срок, который для удобства
+                            делиться на недели (срок меньше месяца) или месяцы по 30 дней. Месячная плата самая
+                            минимальная, суточная – самая высокая.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <h3 class="faq__item-title">
+                        <span>Какие проблемы могут возникнуть при аренде байка в местных компаниях?</span>
+                        <div class="faq__item-icon"></div>
+                    </h3>
+                    <div class="faq__item-content">
+                        <p>
+                            Основная проблема – это мошенничество. Недобросовестные компании могут выдать старый байк,
+                            который будет постоянно ломаться, или не дадут ничего – то есть деньги просто пропадут. Если
+                            вы не знаете компанию, с которой собираетесь работать, то не спешите. Лучше во всем
+                            разобраться на месте, приехав на Пхукет. Мы не берем оплату наперед! Услуга оплачивается
+                            только после того, как вы получите байк и оцените его хорошее состояние.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <h3 class="faq__item-title">
+                        <span>Как воспользоваться услугой и арендовать байк иностранцу?</span>
+                        <div class="faq__item-icon"></div>
+                    </h3>
+                    <div class="faq__item-content">
+                        <p>
+                            Мы работаем в Пхукете официально, поэтому имеем все необходимые документы для ведения
+                            бизнеса. Каждый байк застрахован, на аренду оформляется договор. У вас на руках должен быть
+                            паспорт, права на вождение категории А и деньги для внесения необходимой суммы. Желательно
+                            чтобы в туристической страховке у вас была отметка «управление транспортным средством» или
+                            «экстремальный отдых». Тогда при серьезном ДТП не будете лечиться за свой счет.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <h3 class="faq__item-title">
+                        <span>Какие документы нужны для оформления аренды?</span>
+                        <div class="faq__item-icon"></div>
+                    </h3>
+                    <div class="faq__item-content">
+                        <p>
+                            Паспорт и водительские права. Также необходима туристическая страховка, оформленная на весь
+                            срок вашего пребывания в Таиланде.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <h3 class="faq__item-title">
+                        <span>Попадаются ли мошенники при аренде байка?</span>
+                        <div class="faq__item-icon"></div>
+                    </h3>
+                    <div class="faq__item-content">
+                        <p>
+                            К сожалению, да. То, что вас могут обмануть в интернете – это известный факт, но и на месте
+                            могут быть неприятные сюрпризы. Есть темные личности, занимающиеся субарендой – берут у
+                            местных прокатчиков байки за дешево, а вам сдают уже подороже. При этом с теми, у кого берут
+                            технику, не до конца расплачиваются. А при разборе с полицией вы окажетесь крайним. Всегда
+                            просите показать лицензию и адрес офиса. Если что-то не покажут или попытаются заговорить –
+                            не берите там ничего.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <h3 class="faq__item-title">
+                        <span>Какова стоимость аренды байка на Пхукете?</span>
+                        <div class="faq__item-icon"></div>
+                    </h3>
+                    <div class="faq__item-content">
+                        <p>
+                            Цена на аренду формируется в зависимости от нескольких факторов – сезон, пробег, техническое
+                            состояние, ценовая политика. В зависимости от количества приезжих формируется спрос, поэтому
+                            в туристический пик будет дороже. Если у компании официально на сайте стоимость аренды не
+                            указана – есть риск переплатить в несколько раз. Мы же цены на прокат байков и других
+                            транспортных средств не скрываем – они указаны на сайте к каждой модели.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <h3 class="faq__item-title">
+                        <span>Легально ли вы предоставляете услуги по аренде байков?</span>
+                        <div class="faq__item-icon"></div>
+                    </h3>
+                    <div class="faq__item-content">
+                        <p>
+                            Да, наша компания зарегистрирована и внесена во все реестры, мы платим налоги. У нас есть
+                            все документы, разрешающие ведение хозяйственной деятельности на территории Таиланда. Со
+                            всеми своими клиентами мы заключаем договора аренды, оформленные в соответствии с
+                            требованиями местного законодательства.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+@@include("_bottom.html")

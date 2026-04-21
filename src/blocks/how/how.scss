@@ -1,0 +1,56 @@
+@use 'lib' as *;
+
+.how {
+	$self: &;
+
+	&__container {
+
+	}
+
+	&__title {
+		margin-bottom: fluid(32px, 24px);
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: fluid(24px, 16px);
+
+		@include media("<=md") {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include media("<=xs") {
+			grid-template-columns: 100%
+		}
+	}
+
+	&__card {
+		background: $card;
+		padding: 24px;
+		border-radius: 8px;
+	}
+
+	&__card-top {
+		display: grid;
+		grid-template-columns: 48px 1fr;
+		align-items: center;
+		gap: 16px;
+		margin-bottom: 24px;
+	}
+
+	&__card-icon {
+
+	}
+
+	&__card-title {
+		font-weight: 700;
+		font-size: fluid(20px, 18px);
+		max-width: 240px;
+	}
+
+	&__card-text {
+		line-height: 150%;
+	}
+
+}

@@ -1,0 +1,49 @@
+@use 'lib' as *;
+
+.custom-navigation {
+	$self: &;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 16px;
+	pointer-events: none;
+
+	&__btn {
+
+		cursor: pointer;
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+		overflow: hidden;
+		box-shadow: $cardShadow;
+		position: relative;
+		background: #ffffff;
+		pointer-events: all;
+
+		&:disabled {
+			opacity: 0.5;
+			pointer-events: none;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%; left: 50%;
+			width: 24px; height: 24px;
+			transform: translate(-50%, -50%);
+		}
+
+		&_prev {
+			&::after {
+				background: url("../img/icons/arrow-left.svg") no-repeat center / contain;
+			}
+		}
+
+		&_next {
+			&::after {
+				background: url("../img/icons/arrow-right.svg") no-repeat center / contain;
+			}
+		}
+	}
+
+}

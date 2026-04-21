@@ -1,0 +1,48 @@
+@use 'lib' as *;
+
+.article {
+	$self: &;
+
+	&__container {
+
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		line-height: 150%;
+		font-weight: 500;
+		font-size: fluid(16px, 14px);
+
+		p {
+			
+		}
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			padding-left: 24px;
+
+			li {
+				list-style: disc;
+
+				a {
+					color: $orange;
+				}
+			}
+		}
+
+		h2 {
+			font-weight: 700;
+			font-size: fluid(48px, 24px);
+			line-height: 150%;
+		}
+
+		h3 {
+			font-size: fluid(32px, 20px);
+			line-height: 150%;
+		}
+	}
+
+}

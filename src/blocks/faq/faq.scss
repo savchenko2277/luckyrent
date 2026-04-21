@@ -1,0 +1,95 @@
+@use 'lib' as *;
+
+.faq {
+	$self: &;
+
+	&__container {}
+
+	&__title {
+		margin-bottom: fluid(32px, 24px);
+	}
+
+	&__items {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+
+	}
+
+	&__item {
+		display: grid;
+		grid-template-rows: max-content 0fr;
+		transition: all $transition;
+
+		&.active {
+			grid-template-rows: max-content 1fr;
+
+			#{$self}__item-title {
+				border-radius: 8px 8px 0 0;
+			}
+
+			#{$self}__item-content {
+				padding: 16px 32px;
+			}
+
+			.faq__item-icon {
+				&::before {
+					transform: translateY(-50%) translateX(-50%) rotate(90deg);
+				}
+			}
+		}
+	}
+
+	&__item-title {
+		font-weight: 700;
+		font-size: fluid(20px, 16px);
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		line-height: 150%;
+		cursor: pointer;
+		background: $lightOrange;
+		border-radius: 8px;
+		padding: 16px 32px;
+		gap: 16px;
+	}
+
+	&__item-icon {
+		width: 24px; height: 24px;
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%; left: 50%;
+			width: 24px; height: 3px;
+			background: $text;
+			transform: translate(-50%, -50%);
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%; left: 50%;
+			width: 2px; height: 24px;
+			background: $text;
+			transform: translate(-50%, -50%);
+			transition: all $transition;
+		}
+	}
+
+	&__item-content {
+		overflow: hidden;
+		line-height: 150%;
+		padding: 0 32px;
+		transition: all $transition;
+		background: #ffffff;
+		border-radius: 0 0 8px 8px;
+
+		p {
+			max-width: 960px;
+		}
+	}
+
+}

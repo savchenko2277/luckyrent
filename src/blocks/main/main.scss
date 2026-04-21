@@ -1,0 +1,15 @@
+@use 'lib' as *;
+
+.main {
+	$self: &;
+
+	padding-top: 80px;
+	display: flex;
+	flex-direction: column;
+	gap: fluid(64px, 48px);
+	flex: 1 1 auto;
+
+	@include media("<=xs") {
+		padding-top: 64px;
+	}
+}

@@ -1,0 +1,48 @@
+@use 'lib' as * with(
+	$breakpoints: (
+		'xxxs': 360px,
+		'xxs': 480px,
+		'xs': 640px,
+		'sm': 780px,
+		'md': 960px,
+		'lg': 1100px,
+		'xlg': 1280px,
+		'xxlg': 1440px,
+		'xxxlg': 1680px,
+		'xxxxlg': 1928px
+	)
+);
+
+@use "../blocks/**/*.scss";
+
+// Подключение шрифтов
+
+// @include font-face("filename", "name", value);
+
+body, html {
+	background-color: $background;
+	font-size: 16px;
+	color: $text;
+	font-family: "Arial";
+	line-height: 1.2;
+	font-weight: 400;
+	display: flex;
+	flex-flow: column nowrap;
+	min-height: 100vh;
+}
+
+body.no-scroll {
+	overflow: hidden;
+	padding-right: var(--sw);
+}
+
+.footer {
+	flex: 0 0 auto; 
+}
+
+.sprite {
+	display: none;
+}
+
+em { font-style: italic; }
+strong { font-weight: bold; }
