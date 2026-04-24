@@ -12,7 +12,7 @@
 		padding: fluid(96px, 64px) 0;
 		display: flex;
 		flex-direction: column;
-		gap: 32px;
+		gap: fluid(64px, 48px);
 	}
 
 	&__btn {
@@ -24,7 +24,7 @@
 	}
 
 	&__title {
-		font-size: fluid(64px, 32px);
+		font-size: fluid(64px, 42px);
 		font-weight: 700;
 		max-width: 960px;
 	}
@@ -58,7 +58,7 @@
 
 	&__advantages-item-title {
 		font-weight: 700;
-		margin-bottom: 12px;
+		margin-bottom: fluid(12px, 8px);
 		font-size: fluid(22px, 16px);
 	}
 

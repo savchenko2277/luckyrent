@@ -45,6 +45,21 @@
 		justify-content: space-between;
 		gap: 48px;
 		padding: 16px 0;
+
+		@include media("<=xs") {
+			padding: 12px 0;
+		}
+	}
+
+	&__side {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 24px;
+
+		@include media(">md") {
+			display: none
+		}
 	}
 
 	&__burger {
@@ -114,6 +129,21 @@
 		flex-direction: row;
 		align-items: center;
 		gap: 24px;
+	}
+
+	&__socials_mobile {
+		gap: 16px;
+
+		#{$self}__socials-item {
+			img {
+				width: 32px;
+				height: 32px;
+			}
+
+			span {
+				display: none;
+			}
+		}
 	}
 
 	&__socials-item {
