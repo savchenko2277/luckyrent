@@ -321,7 +321,7 @@
 		flex-direction: column;
 		gap: 8px;
 		color: $text;
-		min-width: 200px;
+		min-width: 250px;
 	}
 
 	&__item-link {
@@ -330,6 +330,8 @@
 		align-items: center;
 		gap: 8px;
 		transition: all $transition;
+		font-size: fluid(18px, 16px);
+		padding: 8px 0;
 
 		&:hover {
 			color: $hoverOrange;

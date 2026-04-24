@@ -21,7 +21,7 @@ import { Navigation } from 'swiper/modules';
             },
             breakpoints: {
                 0: {
-                    slidesPerView: 1,
+                    slidesPerView: 1.1,
                     spaceBetween: 8,
                 },
                 640: {

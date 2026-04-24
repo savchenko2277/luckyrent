@@ -1,0 +1,159 @@
+@use 'lib' as *;
+
+.card {
+	$self: &;
+
+	&__container {}
+
+	&__title {
+		font-weight: 700;
+		font-size: fluid(48px, 24px);
+		margin-bottom: fluid(32px, 24px);
+	}
+
+	&__content {
+		display: grid;
+		grid-template-columns: 460px 1fr;
+		gap: fluid(48px, 24px);
+		margin-bottom: 48px;
+
+		@include media("<=md") {
+			grid-template-columns: 320px 1fr;
+		}
+
+		@include media("<=sm") {
+			grid-template-columns: 100%;
+		}
+	}
+
+	&__gallery {}
+
+	&__photo-wrapper {
+		overflow: visible;
+		position: relative;
+	}
+
+	&__photo.swiper {
+		margin-bottom: 16px;
+		border: solid 1px $divider;
+		border-radius: 16px;
+
+		.swiper-wrapper {
+
+		}
+
+		.swiper-slide img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			overflow: hidden;
+		}
+	}
+
+	&__photo-navigation {
+		position: absolute;
+		top: 50%; left: 50%;
+		transform: translate(-50%, -50%);
+		width: calc(100% + 48px);
+		z-index: 2;
+		justify-content: space-between;
+	}
+
+	&__photo-mini {
+		.swiper-slide {
+			border: 1px solid $divider;
+			border-radius: 16px;
+			overflow: hidden;
+			cursor: pointer;
+
+			&.swiper-slide-thumb-active {
+				border-color: $orange;
+			}
+		}
+	}
+
+	&__about {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: fluid(32px, 24px);
+		height: fit-content;
+
+	}
+
+	&__column {
+		height: fit-content;
+
+		@include media("<=xlg") {
+			grid-column: span 2;
+		}
+	}
+
+	&__column-title {
+		font-weight: 700;
+		margin-bottom: 16px;
+		font-size: fluid(24px, 20px);
+	}
+
+	&__column-content {}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	&__list-item {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		font-weight: 600;
+		justify-content: space-between;
+		text-wrap: nowrap;
+	}
+
+	&__list-item-side {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 12px;
+		font-size: fluid(16px, 14px);
+		width: 100%;
+		flex: 1 1 auto;
+
+		&::after {
+			content: '';
+			width: 100%;
+			height: 2px;
+			background: $divider;
+			flex: 1 1 auto;
+			margin-right: 8px;
+		}
+
+		img {
+			width: 24px;
+			height: 24px;
+			object-fit: contain;
+		}
+	}
+
+	&__article {
+		width: 100%;
+
+		.article__content {
+			width: 100%;
+			max-width: 960px;
+		}
+	}
+
+	&__buttons {
+		display: grid;
+		grid-template-columns: 100%;
+		gap: 8px;
+		grid-column: 2 / span 1;
+
+		@include media("<=xs") {
+			grid-column: span 2;
+		}
+	}
+
+}

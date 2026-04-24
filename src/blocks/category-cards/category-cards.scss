@@ -1,0 +1,55 @@
+@use 'lib' as *;
+
+.category-cards {
+	$self: &;
+
+	&__container {
+
+	}
+
+	&__title {
+		margin-bottom: fluid(48px, 24px);
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: fluid(16px, 8px);
+
+		@include media("<=lg") {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@include media("<=md") {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@include media("<=xs") {
+			grid-template-columns: 100%;
+		}
+	}
+
+	&__navigation {
+		margin-top: fluid(48px, 24px);
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		gap: fluid(48px, 24px);
+	}
+
+	&__navigation-list {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 24px;
+	}
+
+	&__navigation-item {
+		font-size: 18px;
+		font-weight: 700;
+
+		&.active {
+			color: $orange;
+		}
+	}
+
+}

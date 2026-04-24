@@ -1,0 +1,28 @@
+@use 'lib' as *;
+
+.news {
+	$self: &;
+
+	&__container {
+
+	}
+
+	&__title {
+		margin-bottom: fluid(48px, 24px);
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: fluid(24px, 16px);
+
+		@include media("<=md") {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include media("<=xs") {
+			grid-template-columns: 100%;
+		}
+	}
+
+}

@@ -1,0 +1,75 @@
+@use 'lib' as *;
+
+.breadcambs {
+	$self: &;
+
+	display: flex;
+	overflow: visible;
+	padding-top: 80px;
+
+	@include media("<=xs") {
+		padding-top: 64px;
+	}
+
+	&.container {
+		@include media("<=xs") {
+			width: 100%;
+		}
+	}
+
+	&_in-section {
+		padding-top: 0;
+
+		#{$self}__list-item {
+			&:first-child {
+				&::before {
+					content: '';
+					display: block;
+					width: 18px;
+					height: 18px;
+					background: url("../img/icons/home.svg");
+					background-size: cover;
+					margin-right: 8px;
+					transition: all $transition;
+				}
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: start;
+		width: fit-content;
+		text-wrap: nowrap;
+		overflow-x: auto;
+
+		@include media("<=xs") {
+			padding: 0 20px;
+		}
+	}
+
+	&__list-item {
+		font-size: fluid(16px, 14px);
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		a {
+			transition: all $transition;
+
+			&:hover {
+				color: $orange;
+			}
+		}
+
+		&:not(:last-child) {
+			&::after {
+				content: '/';
+				margin: 0 8px;
+			}
+		}
+	}
+
+}

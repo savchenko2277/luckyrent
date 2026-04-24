@@ -14,14 +14,20 @@
 		font-weight: 700;
 		font-size: fluid(20px, 16px);
 		margin-bottom: 16px;
+		line-height: 150%;
 	}
 
 	&__image {
-		width: 100%;
-		aspect-ratio: 1 / 1;
-		margin-bottom: 8px;
-		padding-bottom: 8px;
-		border-bottom: 1px solid $divider;
+		height: 200px;
+		margin-bottom: 24px;
+		display: flex;
+		justify-content: center;
+		margin-top: auto;
+
+		img {
+			height: 100%;
+			object-fit: contain;
+		}
 	}
 
 	&__about {
@@ -31,6 +37,9 @@
 		margin-bottom: 8px;
 		padding-bottom: 8px;
 		border-bottom: 1px solid $divider;
+		margin-top: auto;
+		padding-top: 8px;
+		border-top: 1px solid $divider;
 	}
 
 	&__about-item {
@@ -76,7 +85,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: 8px;
-		margin-top: auto;
 	}
 
 	&__button {

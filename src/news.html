@@ -1,0 +1,35 @@
+@@include("_head.html", {"id":"home"})
+@@include("_header.html")
+
+<main class="main">
+
+    <div class="breadcambs container">
+        <ul class="breadcambs__list">
+            <li class="breadcambs__list-item"><a href="#">Главная</a></li>
+            <li class="breadcambs__list-item"><a href="#">Новости</a></li>
+        </ul>
+    </div>
+
+    <section class="news">
+        <div class="news__container container">
+            <h1 class="news__title title">
+                Наши новости
+            </h1>
+            <div class="news__items">
+                @@include("_card-news.html", {"classCard":"cards-section__slide swiper-slide"})
+                @@include("_card-news.html", {"classCard":"cards-section__slide swiper-slide"})
+                @@include("_card-news.html", {"classCard":"cards-section__slide swiper-slide"})
+                @@include("_card-news.html", {"classCard":"cards-section__slide swiper-slide"})
+                @@include("_card-news.html", {"classCard":"cards-section__slide swiper-slide"})
+                @@include("_card-news.html", {"classCard":"cards-section__slide swiper-slide"})
+                @@include("_card-news.html", {"classCard":"cards-section__slide swiper-slide"})
+                @@include("_card-news.html", {"classCard":"cards-section__slide swiper-slide"})
+            </div>
+        </div>
+    </section>
+
+    @@include("_faq.html")
+
+</main>
+
+@@include("_bottom.html")

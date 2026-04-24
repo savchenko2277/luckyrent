@@ -20,5 +20,4 @@ const setScrollbarWidth = () => {
 }
 
 // Запуск функций
-updateVH();
 setScrollbarWidth();
