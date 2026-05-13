@@ -40,6 +40,8 @@
 		margin-bottom: 16px;
 		border: solid 1px $divider;
 		border-radius: 16px;
+		aspect-ratio: 1 / 1;
+		width: 100%;
 
 		.swiper-wrapper {
 
@@ -62,7 +64,8 @@
 		justify-content: space-between;
 	}
 
-	&__photo-mini {
+	&__photo-mini.swiper {
+		width: 100%;
 		.swiper-slide {
 			border: 1px solid $divider;
 			border-radius: 16px;
