@@ -26,7 +26,10 @@
 		}
 	}
 
-	&__gallery {}
+	&__gallery {
+		display: flex;
+		flex-direction: column;
+	}
 
 	&__photo-wrapper {
 		overflow: visible;
